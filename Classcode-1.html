@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+    <meta charset="utf-8">
+
+	<script>
+		/* 1st example */
+		function doesNothing() {
+		}
+
+		let z = doesNothing();
+		console.log(z);
+
+		function alsoDoesNothing(param1,param2) {
+			let temp = param1 + param2;
+		}
+
+		console.log( doesNothing() === undefined );
+		console.log( alsoDoesNothing() === undefined );
+	</script>
+</body>
+</html>
+

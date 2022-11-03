@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+    <meta charset="utf-8">
+
+	<script>
+		function argsExample(param1,param2) {
+			console.log("Num of arguments: " + arguments.length);
+			console.log(arguments);
+
+		    for(var i = 0; i < arguments.length; i++){
+				console.log((arguments[i]) + " : " + typeof (arguments[i]));
+		    }
+			
+			return param1 + param2;
+		}
+
+		console.log("Result is: " + argsExample(2,3));
+		console.log("Result is: " + argsExample(2,3,"blue", true));
+	</script>
+</body>
+</html>
+

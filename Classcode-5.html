@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+    <meta charset="utf-8">
+
+	<script>
+	
+		function getOpinion(question, outcome1, outcome2) {
+			if ( confirm(question) )
+                outcome1();
+			else
+				outcome2();
+		}
+
+		function outputY() {
+			console.log( "Good!" );
+		}
+
+		function outputN() {
+			console.log( "Try harder!" );
+		}
+
+		getOpinion("Click OK if you are following...", outputY);
+
+	</script>
+ </head>
+
+</html>
+

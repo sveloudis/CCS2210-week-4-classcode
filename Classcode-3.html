@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+    <meta charset="utf-8">
+
+	<script>
+        // Hoisting
+		weLoveJsFunctions("JavaScript", "Rules");
+
+        function weLoveJsFunctions(param1,param2) {
+            console.log("Param1 is: " + param1 + " and param2 is: " + param2);
+        }
+
+        // Hoisting principle with variables
+        x = 1;
+        y = w;
+        w = 5;
+
+        console.log("x = " + x);
+        console.log("y = " + y);
+        console.log("w = " + w);
+
+        let x; // Try changing keyword var to let to see what happens
+        var y;
+        var w = 3; // Initialisation values are not hoisted
+
+	</script>
+</body>
+</html>
+

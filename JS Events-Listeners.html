@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Event listeners</h2>
+
+<button id="myBtn">Try it</button>
+<!--
+    This won't work - only the first onclick takes effect... 
+    <button id="myNewBtn" onclick="document.getElementById('demo').style.background = 'green'; document.getElementById('demo').innerHTML = 'Hello!'; myFunction()">Try it again</button>
+
+-->
+<button id="myNewBtn" onclick="document.getElementById('demo').style.background = 'green'" onclick="document.getElementById('demo').innerHTML = 'Hello!'" onclick="myFunction()">Try it again</button>
+
+<!-- Nesting HTML elements for demonstrating bubbling-->
+<form  onclick="alert('Form!')" id="demoForm">
+    <section  id="demoSec">
+        <p  id="demo"></p>
+    </section>    
+</form>
+
+<script>
+
+    document.getElementById("myBtn").addEventListener("mouseover", displayDate);
+    document.getElementById("myBtn").addEventListener("click", changeColour);
+    document.getElementById("demo").addEventListener("click", babbling1);
+    document.getElementById("demoSec").addEventListener("click", babbling2);
+
+
+
+    function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+
+    function changeColour() {
+        document.getElementById("demo").style.background = "yellow";
+    }
+
+    function myFunction() {
+        //document.getElementById("demo").style.background = "green";
+        //document.getElementById("demo").innerHTML = "Hello!";
+        document.getElementById("demo").style.color = "red";
+    }
+
+    function babbling1() {
+        alert('Paragraph!');
+    }
+
+    function babbling2() {
+        alert('Section!');
+    }
+</script>
+
+</body>
+</html> 
